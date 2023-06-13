@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Finishing_Condition_Classifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5mC-CU-iGO">
+                                <rect key="frame" x="10" y="250" width="394" height="394"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5mC-CU-iGO" secondAttribute="height" multiplier="1:1" id="igy-qX-Ryy"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpO-0r-YQk">
+                                <rect key="frame" x="0.0" y="30" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Вид отделки по фото" id="tJ0-5x-U3E">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle" catalog="system" id="c0b-EU-bN8">
+                                            <connections>
+                                                <segue destination="fKi-U3-KPq" kind="showDetail" id="zyf-gz-Ex3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="organize" id="KXM-VN-gg4">
+                                                <connections>
+                                                    <action selector="albumTapped:" destination="BYZ-38-t0r" id="0xE-A0-zTX"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="camera" id="mOX-y3-wc2">
+                                                <connections>
+                                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="ZEZ-Wk-dOW"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyW-ag-CSQ">
+                                <rect key="frame" x="10" y="649" width="394" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.96828268416741714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5P-Be-kkJ">
+                                <rect key="frame" x="10" y="100" width="394" height="129"/>
+                                <string key="text">Сфотографируйте или загрузите из галереи фото внутреннего помещения объекта коммерческой недвижимости. Искусственный интеллект определит вид его отделки и покажет долю уверенности в результате.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CyW-ag-CSQ" firstAttribute="top" secondItem="5mC-CU-iGO" secondAttribute="bottom" constant="5" id="7l2-Fh-trO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C5P-Be-kkJ" secondAttribute="trailing" constant="10" id="Def-KO-JeI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5mC-CU-iGO" secondAttribute="trailing" constant="10" id="KgL-Rh-ny1"/>
+                            <constraint firstItem="C5P-Be-kkJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="LWD-y6-TJx"/>
+                            <constraint firstItem="MpO-0r-YQk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Pg0-Pp-AuY"/>
+                            <constraint firstItem="MpO-0r-YQk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QXK-1n-O7c"/>
+                            <constraint firstItem="5mC-CU-iGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Uw6-an-E9f"/>
+                            <constraint firstItem="MpO-0r-YQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f2b-JB-kzr"/>
+                            <constraint firstItem="5mC-CU-iGO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="fUI-HZ-tb2"/>
+                            <constraint firstItem="C5P-Be-kkJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mBp-Sz-2an"/>
+                            <constraint firstItem="CyW-ag-CSQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ndn-ap-YIQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CyW-ag-CSQ" secondAttribute="trailing" constant="10" id="wSF-Dz-X6R"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="finishingCondition" destination="CyW-ag-CSQ" id="Wxq-Es-ECF"/>
+                        <outlet property="imageView" destination="5mC-CU-iGO" id="qQl-kD-0gb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="-54"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2kC-sY-ZkF">
+            <objects>
+                <viewController id="fKi-U3-KPq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sx6-Ja-H3V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В приложении доступно определение одного из 4-х видов отделки — Требует ремонта, Удовлетворительный, Стандартный, Улучшенный." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igz-Gh-CNS">
+                                <rect key="frame" x="10" y="163" width="394" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EMc-03-foW"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="igz-Gh-CNS" firstAttribute="leading" secondItem="EMc-03-foW" secondAttribute="leading" constant="10" id="0D9-Qf-dPJ"/>
+                            <constraint firstItem="igz-Gh-CNS" firstAttribute="top" secondItem="EMc-03-foW" secondAttribute="top" constant="163" id="3ML-BI-Zby"/>
+                            <constraint firstItem="EMc-03-foW" firstAttribute="trailing" secondItem="igz-Gh-CNS" secondAttribute="trailing" constant="10" id="UAx-bM-3oB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ox6-Ps-RFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685.50724637681162" y="-55.434782608695656"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>
